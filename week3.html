@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>week3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Untitled_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Untitled_files/libs/quarto-html/quarto.js"></script>
+<script src="Untitled_files/libs/quarto-html/popper.min.js"></script>
+<script src="Untitled_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Untitled_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Untitled_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Untitled_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Untitled_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Untitled_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Untitled_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">week3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ul>
+<li>resources
+<ul>
+<li>statistical modeling foundations</li>
+<li>Samples &amp; populations</li>
+<li>Sample statistics</li>
+<li>Bootstrapping</li>
+<li>Outliers</li>
+<li>Regression</li>
+</ul></li>
+</ul>
+</section>
+<section id="statistical-foundations" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-foundations">Statistical Foundations</h2>
+<ul>
+<li><strong>Goal: extract <em>meaning</em> from data</strong><br>
+</li>
+<li>Common pitfall…
+<ul>
+<li>don’t <em>underestimate</em> importance of visualization</li>
+<li>don’t <em>overestimate</em> importance of analytical results</li>
+<li>both have important and complimentary roles</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://d33wubrfki0l68.cloudfront.net/e5bf2a8f4c787a12facbc0b4191fc82bd192f4c5/4e5d2/diagrams/data-science-model.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Image credit: R for Data Science (https://r4ds.had.co.nz/model-intro.html)</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="key-ideas-samples-populations-sampling-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="key-ideas-samples-populations-sampling-distributions">Key ideas: Samples, populations, sampling distributions</h2>
+<ul>
+<li>our data are just a <strong>sample</strong> representative of some larger population (or process)
+<ul>
+<li>the sample is <em>random</em></li>
+<li>if another person were to replicate the study, they would get a different sample</li>
+<li>if we were to do the study again in the future, we would get a different sample</li>
+</ul></li>
+<li>we care about patterns/structure/models of the <strong>population</strong>
+<ul>
+<li>a good model includes salient features of the population to result in similar outcomes across (random) samples</li>
+</ul></li>
+<li>the <strong>sampling distribution</strong> is simply a distribution of plausible outcomes that would be observed if the study were repeated infinitely many times.
+<ul>
+<li>basically, this is a hypothetical distribution of a sample statistic among all possible samples of a given size</li>
+<li>this primarily gives us a sense of the <em>variability</em> to be expected from one sample to another</li>
+</ul></li>
+</ul>
+</section>
+<section id="statistical-foundations-1" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-foundations-1">Statistical Foundations</h2>
+<ul>
+<li>we often don’t actually care that much about the specific sample that we have
+<ul>
+<li>a sample is a one-time realization of some data collection process</li>
+<li>if we repeat the study/investigation and collect new data we almost certainly observe a different sample</li>
+<li>if we can’t make conclusions <em>beyond</em> the specific sample we happened to encounter, we typically haven’t gained much</li>
+</ul></li>
+<li>we typically care far more about what the sample <strong>represents</strong> (and it’s limitations)
+<ul>
+<li>exploration or explanation of some larger population or process</li>
+<li>outcomes/relationships in the data that can be replicated/reproduced</li>
+<li>future predictions</li>
+<li>and carefully quantifying uncertainty of the outcomes above</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-meet-chris" class="level2">
+<h2 class="anchored" data-anchor-id="example-meet-chris">Example: meet Chris</h2>
+<p><img src="chris.png" class="img-fluid"></p>
+<ul>
+<li>Motivation:
+<ul>
+<li>A close friend of mine is an executive management consultant with PwC</li>
+<li>Chris lives on the East Coast, but travels (M-Th) every week for work</li>
+<li>His primary clients (right now) are on West Coast &amp; Midwest.</li>
+<li>Flight delays are a major threat, because if the client can’t rely on him to be there on time they may give the project to a different consultant.</li>
+</ul></li>
+<li><strong>Goal: He wants to maximize time at home with his wife and kids, without jeopardizing work commitments</strong>
+<ul>
+<li>How early should Chris should plan to arrive in Chicago (ORD) if he wants to avoid missing meetings due to flight delays?</li>
+<li>Q: Ideas how to approach the problem?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(mdsr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(mosaic)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(nycflights13)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(flights)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Get flights from NYC to ORD</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>OrdDelays <span class="ot">&lt;-</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  flights <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"ORD"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="example-flight-delays-from-new-york-to-chicago" class="level2">
+<h2 class="anchored" data-anchor-id="example-flight-delays-from-new-york-to-chicago">Example: flight delays from New York to Chicago</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>OrdDelays28 <span class="ot">&lt;-</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  OrdDelays <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">28</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Chris flies a lot and knows some statistics, but lets suppose he only has data from 28 flights
+<ul>
+<li>Here are some summary statistics</li>
+<li>Q: How should he decide when to arrive?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics of delays</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">favstats</span>( <span class="sc">~</span> arr_delay, <span class="at">data =</span> OrdDelays28)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> min  Q1 median   Q3 max      mean       sd  n missing
+ -40 -26  -10.5 11.5  93 -1.285714 32.85079 28       0</code></pre>
+</div>
+</div>
+</section>
+<section id="example-flight-delays-from-new-york-to-chicago-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-flight-delays-from-new-york-to-chicago-1">Example: flight delays from New York to Chicago</h2>
+<ul>
+<li>Trade-off… Maybe Chris can risk being late once in a while to have more time with his family</li>
+<li>Here’s what he might decide <em>based on his sample</em>
+<ul>
+<li>he flies just about every week</li>
+<li>97% percent on-time would mean that he expects to be late a little more than once per year.</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tolerance28 <span class="ot">&lt;-</span> <span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> OrdDelays28)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tolerance28</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  97% 
+74.37 </code></pre>
+</div>
+</div>
+</section>
+<section id="example-flight-delays-from-new-york-to-chicago-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-flight-delays-from-new-york-to-chicago-2">Example: flight delays from New York to Chicago</h2>
+<ul>
+<li>Chris doesn’t have the <strong>population</strong>
+<ul>
+<li>he can’t know if his is an effective policy or not…</li>
+<li>does this <strong>really</strong> work 97% of the time??<br>
+</li>
+<li>Is he too late? Too early??</li>
+</ul></li>
+<li>In our hypothetical exercise, we <strong>do</strong> have a population,
+<ul>
+<li>we can see how he did</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reality of population (unknown/unknowable to Chris)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">favstats</span>( <span class="sc">~</span> arr_delay, <span class="at">data =</span> OrdDelays)  <span class="co"># full data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> min  Q1 median Q3  max     mean       sd     n missing
+ -62 -20     -8 13 1109 5.876615 48.00894 16566     717</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># population value for 0.97 quantile</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tolerance <span class="ot">&lt;-</span> <span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> OrdDelays)  <span class="co"># full data</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>tolerance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>97% 
+132 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Actual performance for Chris...</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>(<span class="sc">~</span> arr_delay <span class="sc">&lt;</span> tolerance28, <span class="at">data =</span> OrdDelays, <span class="at">format =</span> <span class="st">"proportion"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>arr_delay &lt; tolerance28
+      TRUE      FALSE       &lt;NA&gt; 
+0.88786669 0.07064746 0.04148585 </code></pre>
+</div>
+</div>
+</section>
+<section id="problem-solved-not-quite" class="level2">
+<h2 class="anchored" data-anchor-id="problem-solved-not-quite">Problem solved? (Not quite)</h2>
+<ul>
+<li>There’s still quite a bit of risk due to randomness…
+<ul>
+<li>an interval estimate for the 0.97 quantile would be better</li>
+<li>Q: <strong>how should we do it?</strong></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Results vary... four different samples = four different results</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  97% 
+96.19 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  97% 
+56.36 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  97% 
+65.55 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   97% 
+202.31 </code></pre>
+</div>
+</div>
+</section>
+<section id="distribution-of-the-estimate-depends-on-sample-size" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-of-the-estimate-depends-on-sample-size">Distribution of the estimate depends on sample size</h2>
+<ul>
+<li>Let’s simulate 1000 samples from our <code>OrdDelay</code> (full) data</li>
+<li>Any one of these could be the sample that Chris happened to observe</li>
+<li>We just want to see how much these samples vary from one to the next</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>SimsSmallN <span class="ot">&lt;-</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  mosaic<span class="sc">::</span><span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect result</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(SimsSmallN)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    X97.
+1 155.66
+2 218.00
+3 207.25
+4 124.68
+5 167.53
+6  92.52</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># variability of our 0.97 quantile estimate (note "sd")</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">favstats</span>(<span class="sc">~</span>X97., <span class="at">data =</span> SimsSmallN)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  min      Q1 median     Q3    max     mean       sd    n missing
+ 5.52 70.9375 100.84 143.04 514.64 111.5118 57.43884 1000       0</code></pre>
+</div>
+</div>
+<section id="vocabulary" class="level4">
+<h4 class="anchored" data-anchor-id="vocabulary">Vocabulary</h4>
+<ul>
+<li><em>Sample size (n)</em> is the number of cases in an observed sample</li>
+<li><em>Sampling distribution</em> is the collection of the sample statistic from all trials
+<ul>
+<li>a theoretical sampling distribution includes all possible trials</li>
+<li>we have 1000 simulated trials,
+<ul>
+<li>that specific number doesn’t matter much as long as it’s “large”</li>
+<li>10s of thousands or millions are common in practice</li>
+<li>do more if a precise result is important</li>
+</ul></li>
+</ul></li>
+<li><em>shape</em> of the sampling distribution is worth noting (ours is right-skewed here)</li>
+<li><em>standard error</em> is the standard deviation of the sampling distribution for a statistic
+<ul>
+<li>Here, we estimate the SE using the SD of many simulated 0.97 quantile estimates</li>
+<li>you can find this result in our <code>favstats()</code> output above</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>SimsSmallN <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> X97.)) <span class="sc">+</span> </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"1000 simulated 0.97 quantiles for flight delays among samples of n = 28"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="what-if-we-have-a-bigger-sample" class="level2">
+<h2 class="anchored" data-anchor-id="what-if-we-have-a-bigger-sample">What if we have a bigger sample?</h2>
+<ul>
+<li>Maybe Chris can pool flight information with a few colleagues that regularly fly NYC ro ORD
+<ul>
+<li>No flight counted more than once (i.e.&nbsp;if they had shared a flight)</li>
+<li>Q: Would a bigger data set matter? What do you expect to change?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>nBigger <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>SimsBigN <span class="ot">&lt;-</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  mosaic<span class="sc">::</span><span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">data =</span> <span class="fu">sample_n</span>(OrdDelays, <span class="at">size =</span> nBigger, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect result</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(SimsSmallN)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    X97.
+1 155.66
+2 218.00
+3 207.25
+4 124.68
+5 167.53
+6  92.52</code></pre>
+</div>
+</div>
+<section id="plot-comparison-n-28-n-150" class="level4">
+<h4 class="anchored" data-anchor-id="plot-comparison-n-28-n-150">Plot comparison (n = 28; n = 150)</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># combine results into a single tbl</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>BothSims <span class="ot">&lt;-</span> </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(SimsSmallN <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">SampleSize =</span> n), SimsBigN <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">SampleSize =</span> nBigger)) </span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># summary comparison</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">favstats</span>( X97. <span class="sc">~</span> SampleSize, <span class="at">data =</span> BothSims)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  SampleSize   min       Q1 median     Q3    max     mean       sd    n missing
+1         28  5.52  70.9375 100.84 143.04 514.64 111.5118 57.43884 1000       0
+2        150 52.00 103.7225 120.60 141.00 248.99 124.2485 28.63663 1000       0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot comparison</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>BothSims <span class="sc">%&gt;%</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> X97.)) <span class="sc">+</span> </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span> </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( <span class="sc">~</span> SampleSize) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Sample 0.98 Quantile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="access-to-sampling-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="access-to-sampling-distribution">Access to Sampling Distribution</h2>
+<ul>
+<li>Important: in the previous exercise we were able to simulate an actual sampling distribution because we were actually drawing random samples from the population.
+<ul>
+<li>We nearly always just have one sample</li>
+<li>We need another way to access the sampling distribution</li>
+</ul></li>
+<li>With just one sample of the data we have a few options to characterize a sampling distribution
+<ul>
+<li>Analytical solutions derived from statistical theory (e.g.&nbsp;t-test)</li>
+<li>Simulation-based methods</li>
+</ul></li>
+</ul>
+</section>
+<section id="bootstrapping" class="level2">
+<h2 class="anchored" data-anchor-id="bootstrapping">Bootstrapping</h2>
+<ul>
+<li>We assume our sample is representative of the population</li>
+<li>The population can be reasonably approximated by many, many, many copies of our sample</li>
+<li><strong>Just as we had previously drawn many samples from the population, “bootstrapping” approximates this process by drawing simulated samples (with replacement) from our original sample</strong></li>
+</ul>
+<section id="discussion-questions" class="level4">
+<h4 class="anchored" data-anchor-id="discussion-questions">Discussion Questions:</h4>
+<ul>
+<li>Why do we need to sample <strong>with</strong> replacement?</li>
+<li>Does bootstrapping collect <strong>new</strong> data?</li>
+<li>Do you expect the <strong>mean</strong> of the bootstrap sampling distribution to be equivalent to the mean of the (true) sampling distribution?</li>
+<li>Do you expect the <strong>standard error</strong> of the bootstrap sampling distribution to be equivalent to the standard error of the (true) sampling distribution?</li>
+</ul>
+<!-- Day2 -->
+</section>
+</section>
+<section id="back-to-chris" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-chris">Back to Chris…</h2>
+<p><strong>Chris wants to be more confident that flight delays will not make him late more than 3% of the time, what should he do?</strong><br>
+- He pools flight delay data with colleagues and they come up with a much bigger data set of 230 flights - We’ll call it <code>OrdColleagueData</code></p>
+</section>
+<section id="bootstrap-confidence-interval" class="level2">
+<h2 class="anchored" data-anchor-id="bootstrap-confidence-interval">Bootstrap confidence interval</h2>
+<ol type="1">
+<li>using the data combined among Chris’ colleagues–<code>OrdColleagueData</code>–we sample with replacement and calculate the 0.97 quantile each time.</li>
+<li>we now have a distribution of bootstrap sample quantile estimates (1000 of them in this case)</li>
+<li>we use that distribution to produce an interval estimate
+<ul>
+<li>In this case, a confidence interval for 97th percentile of arrival delay</li>
+</ul></li>
+</ol>
+<section id="bootstrap-sampling-distribution" class="level4">
+<h4 class="anchored" data-anchor-id="bootstrap-sampling-distribution">bootstrap sampling distribution</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Chris and colleagues pool data for 230 samples</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>OrdColleagueData <span class="ot">&lt;-</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  OrdDelays <span class="sc">%&gt;%</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">230</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># bootstrap distribution</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>BootStrapTrials <span class="ot">&lt;-</span> </span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  mosaic<span class="sc">::</span><span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">qdata</span>(<span class="sc">~</span> arr_delay, <span class="at">p =</span> <span class="fl">0.97</span>, </span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>                           <span class="at">data =</span> <span class="fu">sample_n</span>(OrdColleagueData, <span class="at">size =</span> <span class="dv">230</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="confidence-interval" class="level4">
+<h4 class="anchored" data-anchor-id="confidence-interval">confidence interval</h4>
+<ul>
+<li>If the bootstrap sampling distribution looks approximately Normal:
+<ul>
+<li>compute the Chris’s sample mean</li>
+<li>estimate the standard error using the standard deviation of the bootstrap sampling distribution</li>
+<li>Confidence interval: <span class="math inline">\(est \pm z^* (SE)\)</span>
+<ul>
+<li>“est” is the estimate from the sample (Chris’ data)</li>
+<li><span class="math inline">\(z^*\)</span> is a critical value from the Normal distribution commensurate with confidence level (e.g.&nbsp;1.96 for 95% CI)</li>
+<li><span class="math inline">\(SE\)</span> is the standard error which we’ve estimated from the standard deviation of the bootstrap distribution</li>
+</ul></li>
+</ul></li>
+<li>If bootstrap sampling distribution is fairly smooth, but not symmetric (e.g.&nbsp;skewed),
+<ul>
+<li>we could use a percentile method to approximate our confidence interval</li>
+<li>not perfect, but still useful</li>
+</ul></li>
+<li>If bootstrap sampling distirbution has big gaps or other problems,
+<ul>
+<li>we should think hard about alternative solutions…</li>
+<li>e.g., what’s making the sampling distribution so ugly?</li>
+</ul></li>
+</ul>
+</section>
+<section id="our-results" class="level4">
+<h4 class="anchored" data-anchor-id="our-results">Our results?</h4>
+<ul>
+<li>the distribution is not pretty… it’s sort of a borderline case
+<ul>
+<li>definitely not Normal, but possibly still useful</li>
+<li>we should even be suspicious of a bootsrap percentile interval
+<ul>
+<li>we’ll suppose he wants to 80% confident his flights will arrive on time 97% of the time</li>
+</ul></li>
+</ul></li>
+<li>Discussion questions
+<ul>
+<li>Q: How should Chris decide how early he should plan to arrive?</li>
+<li>Q: Why could make this bootstrap sampling distribution look so strange?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>BootStrapTrials <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span>  X97.))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Maybe Chris just wants to be 80% confident he will be on time 97% of the time</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span>  X97., <span class="at">p =</span> <span class="fl">0.8</span>, <span class="at">data =</span> BootStrapTrials)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   80% 
+142.12 </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="outliers" class="level2">
+<h2 class="anchored" data-anchor-id="outliers">Outliers</h2>
+<ul>
+<li>Part of the problem for Chris was the fact that
+<ol type="1">
+<li>we were interested in characterizing the tail of the disribution;</li>
+<li>we had a lot of extreme observations (potential outliers)</li>
+</ol></li>
+<li>An <strong>outlier</strong> is an observation that doesn’t seem to conform to the pattern of the data
+<ul>
+<li><strong>completely legitimate observations may appear to be outliers</strong></li>
+<li>problematic outliers are cases that are fundamentally different from the population
+<ul>
+<li>Q: examples?</li>
+</ul></li>
+</ul></li>
+<li>We can learn a lot by studying extreme observations in the data</li>
+</ul>
+</section>
+<section id="long-delays" class="level2">
+<h2 class="anchored" data-anchor-id="long-delays">Long delays</h2>
+<ul>
+<li>The longest delays (&gt; 6 hrs) were most often associated with American Eagle (MQ) and United Airlines (UA) and frequently occur in the Spring months (March, April, May).
+<ul>
+<li>Q: What should we do with this information?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>OrdDelays <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(arr_delay <span class="sc">&gt;=</span> <span class="dv">360</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(carrier, month, day, dep_delay, arr_delay, <span class="at">air_delay =</span> arr_delay <span class="sc">-</span> dep_delay) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(arr_delay))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 14 × 6
+   carrier month   day dep_delay arr_delay air_delay
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1 MQ          1    10      1126      1109       -17
+ 2 MQ          5     3       878       875        -3
+ 3 AA          5    23       466       448       -18
+ 4 MQ          4    12       414       428        14
+ 5 UA          6    25       420       424         4
+ 6 UA          8    28       424       398       -26
+ 7 UA          1    10       385       394         9
+ 8 MQ          4    19       381       385         4
+ 9 UA          3    14       406       384       -22
+10 UA          5    22       406       378       -28
+11 UA          4    10       307       377        70
+12 MQ          7    28       339       369        30
+13 MQ         12     5       361       366         5
+14 MQ          4    28       375       366        -9</code></pre>
+</div>
+</div>
+<section id="minute-delays" class="level4">
+<h4 class="anchored" data-anchor-id="minute-delays">132 minute delays</h4>
+<ul>
+<li>Actually, American Eagle (MQ) isn’t so bad after looking at carrier volume &amp; comparing with Chris’ threshold</li>
+<li>Best carrier performance
+<ul>
+<li>American Airlines looks better than average</li>
+<li>United meets expectation;</li>
+</ul></li>
+<li>Below average carrier performance
+<ul>
+<li>Pinnacle Airlines (9E)</li>
+<li>JetBlue (B6)</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect long delay volume</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>OrdDelays <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(arr_delay)) <span class="sc">%&gt;%</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">long_delay =</span> arr_delay <span class="sc">&gt;=</span> <span class="dv">132</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>( <span class="sc">~</span> long_delay <span class="sc">|</span> carrier, <span class="at">data =</span> ., <span class="at">format =</span> <span class="st">"count"</span>, <span class="at">margins =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          carrier
+long_delay   9E   AA   B6   EV   MQ   OO   UA
+     TRUE    56  130   44    0   74    0  194
+     FALSE  928 5716  848    2 2023    1 6550
+     Total  984 5846  892    2 2097    1 6744</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect long delay proportion</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>OrdDelays <span class="sc">%&gt;%</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(arr_delay)) <span class="sc">%&gt;%</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">long_delay =</span> arr_delay <span class="sc">&gt;=</span> <span class="dv">132</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tally</span>( <span class="sc">~</span> long_delay <span class="sc">|</span> carrier, <span class="at">data =</span> ., <span class="at">format =</span> <span class="st">"percent"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          carrier
+long_delay     9E     AA     B6     EV     MQ     OO     UA
+     TRUE    5.69   2.22   4.93   0.00   3.53   0.00   2.88
+     FALSE  94.31  97.78  95.07 100.00  96.47 100.00  97.12</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="we-need-a-way-to-account-for-other-variables-in-our-model" class="level2">
+<h2 class="anchored" data-anchor-id="we-need-a-way-to-account-for-other-variables-in-our-model">We need a way to account for other variables in our model…</h2>
+<ul>
+<li>Q: Are the effects we’re observing <strong>real</strong> or are we just being fooled by <strong>randomness</strong>?</li>
+<li>Q: How should we evaluate?
+<ul>
+<li>interpret</li>
+<li>conclude</li>
+<li>what about more data?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># for simplicity, we model average arrival delays here</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>ordModel <span class="ot">&lt;-</span> </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  OrdColleagueData <span class="sc">%&gt;%</span> </span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">carrierAA =</span> <span class="fu">if_else</span>(carrier <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"AA"</span>), <span class="at">true =</span> <span class="st">"AA"</span>, <span class="at">false =</span> <span class="st">"OtherCarrier"</span>), </span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">season =</span> <span class="fu">if_else</span>(month <span class="sc">%in%</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">true =</span> <span class="st">"Spring"</span>, <span class="at">false =</span> <span class="st">"NotSpring"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(arr_delay <span class="sc">~</span> carrierAA <span class="sc">+</span> season, <span class="at">data =</span> .)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="co"># How to interpret? What have we learned? </span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(ordModel)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)             -6.665      5.288  -1.260   0.2089  
+carrierAAOtherCarrier   15.522      6.434   2.413   0.0167 *
+seasonSpring             2.365      7.960   0.297   0.7667  
+
+Residual standard error: 46.43 on 218 degrees of freedom
+  (9 observations deleted due to missingness)
+Multiple R-squared:  0.02638,   Adjusted R-squared:  0.01745 
+F-statistic: 2.954 on 2 and 218 DF,  p-value: 0.05424</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(ordModel)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                           2.5 %    97.5 %
+(Intercept)           -17.086739  3.757159
+carrierAAOtherCarrier   2.841492 28.203507
+seasonSpring          -13.324115 18.054410</code></pre>
+</div>
+</div>
+<!-- Day3 -->
+</section>
+<section id="segue-to-model-basics" class="level2">
+<h2 class="anchored" data-anchor-id="segue-to-model-basics">Segue to Model Basics</h2>
+<ul>
+<li>We were trying to use Chris’ flight data to come up with a rule that could be useful for preventing excessive delays from jeopardizing his meetings in Chicago
+<ul>
+<li>We started by only looking at the arrival delay itself <code>arr_delay</code></li>
+<li>After poking around for a while, we noticed that useful information might be gained from other variables
+<ul>
+<li>carrier</li>
+<li>time of year (longest delays in Spring)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="multiple-testing" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-testing">Multiple Testing</h2>
+<ul>
+<li>If you end up evaluating multiple tests of the same data, you lose control of Type I error rate
+<ul>
+<li>Q: What does type I error rate mean?</li>
+<li>Q: How do we quantify type I error rate?</li>
+<li>Q: What’s the big deal? Why does it matter??</li>
+</ul></li>
+<li>Multiple testing and appropriate adjustments</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 Tests...</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.142625</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bonferroni adjustment for 3 tests</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fl">0.05</span> <span class="sc">/</span> <span class="dv">3</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> b)<span class="sc">^</span><span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0491713</code></pre>
+</div>
+</div>
+</section>
+<section id="asa-statement-on-p-values" class="level2">
+<h2 class="anchored" data-anchor-id="asa-statement-on-p-values">ASA Statement on p-values…</h2>
+<ul>
+<li>Lots of people have heard of “p-values” and have some vague concept of “smaller the better”</li>
+<li>Incomplete understanding can lead to bogus conclusions and distrust of statisticians &amp; data analysts</li>
+<li>Here’s what the American Statistical Assoc wants everyone to know about p-values
+<ol type="1">
+<li>p-values can indicate how <strong>in</strong>compatible the data are with a specified model</li>
+<li>p-values do NOT measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone</li>
+<li>scientific conclusions and business or policy decisions should NOT be based only on whether a p-value passes a specific threshold</li>
+<li>proper inference requires full reporting and transparency</li>
+<li>a p-value, or statistical significance, does not measure the size of an effect or the importance of a result</li>
+<li>by itself, a p-value does not provide a good measure of evidence regarding a model hypothesis.</li>
+</ol></li>
+</ul>
+</section>
+<section id="hypothesis-generation-vs.-hypothesis-confirmation" class="level2">
+<h2 class="anchored" data-anchor-id="hypothesis-generation-vs.-hypothesis-confirmation">Hypothesis generation vs.&nbsp;hypothesis confirmation</h2>
+<ul>
+<li>traditional focus of modelling is on inference–attempting to confirm some hypothesis is true (or not false…)</li>
+<li>the process is not <em>complicated</em>, but can be <em>hard</em> because we need to understand that
+<ol type="1">
+<li>Each observation can either be used for exploration or confirmation, not both.</li>
+<li>You can use an observation as many times as you like for exploration, but only once for confirmation.</li>
+</ol></li>
+<li><em>As soon as you use an observation twice, you’ve switched from confirmation to exploration.</em> If possible, consider partitioning the data as follows:
+<ul>
+<li>60% of the data for <strong>exploration</strong> (or training) set</li>
+<li>20% of the data for a <strong>query</strong> (or validation) set</li>
+<li>20% of the data for a <strong>test</strong> (or confirmation) set</li>
+</ul></li>
+</ul>
+</section>
+<section id="model-basics" class="level2">
+<h2 class="anchored" data-anchor-id="model-basics">Model Basics</h2>
+<section id="goals-of-modeling" class="level4">
+<h4 class="anchored" data-anchor-id="goals-of-modeling">Goals of modeling:</h4>
+<ul>
+<li>“provide a simple, low-dimensional summary of a data set” (R4DS)</li>
+<li>You may use these tools in different contexts for various purposes
+<ul>
+<li>description</li>
+<li>inference</li>
+<li>prediction</li>
+</ul></li>
+<li>In each case, we are <em>explaining variation</em>
+<ul>
+<li>some variation in the data is structural</li>
+<li>some variation in the data is simply randomness</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="choosing-a-model" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-model">Choosing a model</h2>
+<ul>
+<li>Model family (general)
+<ul>
+<li>Chosen based on understanding of data and goals of analysis</li>
+<li>Expresses a precise (but generic) pattern you want to capture
+<ul>
+<li>Line: <span class="math inline">\(y = a_1 + a_2 * x\)</span></li>
+<li>Curve: <span class="math inline">\(y = a_1 * x^{a_2}\)</span></li>
+<li><span class="math inline">\(y\)</span> &amp; <span class="math inline">\(x\)</span> are <strong>variables</strong> that are <strong>observed</strong> in your data</li>
+<li><span class="math inline">\(a_1\)</span> &amp; <span class="math inline">\(a_2\)</span> are <strong>parameters</strong> that can be modified to capture different patterns</li>
+</ul></li>
+</ul></li>
+<li>Fitted model (specific)
+<ul>
+<li><strong>Constrained by model family</strong></li>
+<li>Choose parameters that result in the model that is “closest” to your data
+<ul>
+<li>Line: <span class="math inline">\(y = 7 + 3 * x\)</span></li>
+<li>Curve: <span class="math inline">\(y = 9 * x^2\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="all-models-are-wrong-some-are-useful" class="level2">
+<h2 class="anchored" data-anchor-id="all-models-are-wrong-some-are-useful">All models are wrong (some are useful)</h2>
+<ul>
+<li>“All models are wrong, some are useful” –George Box (statistician)</li>
+<li>Classical Mechanics (physics):
+<ul>
+<li>Isaac Newton’s “laws” of motion (physics) are demonstrably <strong>wrong</strong>
+<ul>
+<li>The model generally does well describing motion for objects as small as bacteria and as large as planets, stars, and galaxies.<br>
+</li>
+<li>Newton’s laws were known to be inaccurate when predicting the orbit of Mercury</li>
+</ul></li>
+<li>Close enough?! (i.e.&nbsp;<strong>useful</strong>?)</li>
+</ul></li>
+<li>Einstein’s theory of (general) relativity
+<ul>
+<li>Classical mechanics breaks down when bodies involved are extremely massive or moving extremely fast</li>
+<li>Accurate GPS requires relativity (Newton would be off by a couple miles)</li>
+</ul></li>
+</ul>
+<section id="moral-all-models-are-wrong-some-are-useful" class="level4">
+<h4 class="anchored" data-anchor-id="moral-all-models-are-wrong-some-are-useful">Moral: all models are wrong; some are useful</h4>
+<ol type="1">
+<li><p>Newtonian physics was known to be <strong>wrong</strong> for nearly 2 centuries before relativity came along, in part because it failed to accurately predict the orbit of Mercury. The model was (and is?) <strong>useful</strong> for tons of practical purposes</p></li>
+<li><p>Einstein’s theory of relativity is almost certainly <strong>wrong</strong> too because it fails for subatomic particles… but it’s still <strong>useful</strong></p></li>
+</ol>
+</section>
+</section>
+<section id="simple-example" class="level2">
+<h2 class="anchored" data-anchor-id="simple-example">Simple example</h2>
+<ul>
+<li>We’ll use linear regression as a sandbox to build some intuition and tools
+<ul>
+<li>once you understand some basic principles in the context of regression, we can translate to other models</li>
+</ul></li>
+<li>consider a simulated data set <code>sim1</code> with variables <code>y</code> and <code>x</code></li>
+<li>it looks like they’re related to one another, so perhaps we can model their relationsip
+<ul>
+<li>Family: <span class="math inline">\(y = b_0 + b_1 * x\)</span></li>
+<li>Fit: choose the “best” <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="simple-example-random-models" class="level2">
+<h2 class="anchored" data-anchor-id="simple-example-random-models">Simple example (random models)</h2>
+<ul>
+<li>we could just randomly generate models and pick a few candidates that look “best”</li>
+<li>intuition says this is silly approach…
+<ul>
+<li>Why do we think know better?</li>
+<li>How might we judge whether one model is “better” than another?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">b0 =</span> <span class="fu">runif</span>(<span class="dv">250</span>, <span class="sc">-</span><span class="dv">20</span>, <span class="dv">40</span>),</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">b1 =</span> <span class="fu">runif</span>(<span class="dv">250</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span> </span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> b0, <span class="at">slope =</span> b1), <span class="at">data =</span> models, <span class="at">alpha =</span> <span class="fl">0.25</span>) <span class="sc">+</span> </span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="distance-from-points-to-the-model-14" class="level2">
+<h2 class="anchored" data-anchor-id="distance-from-points-to-the-model-14">Distance from points to the model (1/4)</h2>
+<ul>
+<li>a natural thought is to evaluate the vertical distance from each point to a candidate model
+<ul>
+<li>the point represents our observed <strong>response</strong> (from the data)</li>
+<li>the corresponding location on the model is a <strong>prediction</strong></li>
+</ul></li>
+<li>model fitting applet: <a href="http://www.rossmanchance.com/applets/RegShuffle.htm" class="uri">http://www.rossmanchance.com/applets/RegShuffle.htm</a></li>
+<li>Note: x-values are shifted slightly to avoid overplotting in the figure</li>
+</ul>
+<p><img src="absErrorsR4DS.png" class="img-fluid"></p>
+</section>
+<section id="distance-from-points-to-the-model-24" class="level2">
+<h2 class="anchored" data-anchor-id="distance-from-points-to-the-model-24">Distance from points to the model (2/4)</h2>
+<ul>
+<li>calculating the distance directly
+<ul>
+<li>let’s turn our model into a function</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="cf">function</span>(a, data) {</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># purpose: calculate predictions for a given model </span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># inputs: </span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="do">### a: vector of coefficient estimates for linear model (e.g. intercept &amp; slopes)</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">### data: vector of observed response data</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>  a[<span class="dv">1</span>] <span class="sc">+</span> data<span class="sc">$</span>x <span class="sc">*</span> a[<span class="dv">2</span>]</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="co"># show model predictions</span></span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="fu">model1</span>(<span class="fu">c</span>(<span class="dv">7</span>, <span class="fl">1.5</span>), sim1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  8.5  8.5  8.5 10.0 10.0 10.0 11.5 11.5 11.5 13.0 13.0 13.0 14.5 14.5 14.5
+[16] 16.0 16.0 16.0 17.5 17.5 17.5 19.0 19.0 19.0 20.5 20.5 20.5 22.0 22.0 22.0</code></pre>
+</div>
+</div>
+</section>
+<section id="distance-from-points-to-the-model-34" class="level2">
+<h2 class="anchored" data-anchor-id="distance-from-points-to-the-model-34">Distance from points to the model (3/4)</h2>
+<ul>
+<li>calculating the distance directly
+<ul>
+<li>let’s turn our model into a function</li>
+<li>measure collective distance from <strong>all points</strong> to the model
+<ul>
+<li>Statisticians typically use the “root-mean-squared” deviation</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>measure_distance <span class="ot">&lt;-</span> <span class="cf">function</span>(mod, data) {</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># purpose: calculate distance from observed points to model predictions</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># inputs: </span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="do">### mod: vector of parameter estimates for linear model (e.g. intercept &amp; slope(s))</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">### data: observed data </span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>  diff <span class="ot">&lt;-</span> data<span class="sc">$</span>y <span class="sc">-</span> <span class="fu">model1</span>(mod, data)</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>(<span class="fu">mean</span>(diff <span class="sc">^</span> <span class="dv">2</span>))</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co"># show RMS deviation for the model</span></span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="fu">measure_distance</span>(<span class="fu">c</span>(<span class="dv">7</span>, <span class="fl">1.5</span>), sim1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.665212</code></pre>
+</div>
+</div>
+</section>
+<section id="distance-from-points-to-each-candidate-models-44" class="level2">
+<h2 class="anchored" data-anchor-id="distance-from-points-to-each-candidate-models-44">Distance from points to each candidate models (4/4)</h2>
+<ul>
+<li>calculating the distance directly
+<ul>
+<li>let’s turn our model into a function</li>
+<li>measure collective distance from <strong>all points</strong> to the model</li>
+</ul></li>
+<li>repeat for all 250 of our models using <code>purrr::map2()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>sim1_dist <span class="ot">&lt;-</span> <span class="cf">function</span>(b0, b1) {</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># purpose: helper function because our distance function </span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#            expects the model as a numeric vector of length 2</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># inputs: </span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">### b0: intercept estimate</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">### b1: slope estimate </span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>  <span class="do">### sim1: data in environment</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">measure_distance</span>(<span class="fu">c</span>(b0, b1), sim1)</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> </span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>  models <span class="sc">%&gt;%</span> </span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dist =</span> purrr<span class="sc">::</span><span class="fu">map2_dbl</span>(b0, b1, <span class="at">.f =</span> sim1_dist))</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>models</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 250 × 3
+        b0     b1  dist
+     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+ 1   1.77   1.12   8.32
+ 2  36.2   -0.915 17.9 
+ 3  34.6   -3.41  15.8 
+ 4  -1.61  -3.22  38.0 
+ 5  38.2    2.18  34.8 
+ 6   2.04   4.94  16.2 
+ 7 -18.5    2.32  21.3 
+ 8  -4.97  -0.329 23.4 
+ 9  -0.192  4.14   9.52
+10  -3.31  -0.285 21.6 
+# ℹ 240 more rows</code></pre>
+</div>
+</div>
+<section id="progress" class="level4">
+<h4 class="anchored" data-anchor-id="progress">Progress…</h4>
+<ul>
+<li>We now have a distance metric that quantifies performance of all 250 of our random models</li>
+<li>Now we can start to evaluate if some of them are <strong>useful</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span> </span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span> </span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> b0, <span class="at">slope =</span> b1), <span class="at">data =</span> models, <span class="at">alpha =</span> <span class="fl">0.25</span>) <span class="sc">+</span> </span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="best-random-models-for-sim1-data" class="level2">
+<h2 class="anchored" data-anchor-id="best-random-models-for-sim1-data">Best (random) models for <code>sim1</code> data</h2>
+<ul>
+<li>we have a metric</li>
+<li>let’s inspect our top 10 results according to our distance criterion
+<ul>
+<li>brightest models fit the data “best”</li>
+<li>note all the obviously silly models are gone</li>
+<li>several decent candidate models left</li>
+</ul></li>
+<li>Q: How can we do <em>even better</em>?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span> </span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span> </span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> b0, <span class="at">slope =</span> b1, <span class="at">colour =</span> <span class="sc">-</span>dist), </span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> <span class="fu">filter</span>(models, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<!-- Begin Day 4 (1/30) -->
+</section>
+<section id="best-random-models-for-sim1-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="best-random-models-for-sim1-data-1">Best (random) models for <code>sim1</code> data</h2>
+<ul>
+<li>What if we visualized the slope (b1), intercept (b0), and distance metric (diff) on a 3-dimensional plot?
+<ul>
+<li>slope and intercept are <strong>both</strong> related to distance metric</li>
+<li>we just want to search for the “best” combinations using our criterion</li>
+</ul></li>
+<li>points are slope/intercept pairs (i.e.&nbsp;models) colored by our distance criterion
+<ul>
+<li>brighter color is “better” (i.e.&nbsp;less collective distance from model to data)</li>
+<li>the top 10 shown previously are highlighted in red</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(models, <span class="fu">aes</span>(b0, b1)) <span class="sc">+</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(models, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> <span class="sc">-</span>dist))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="random-models-was-silly-but-not-that-silly" class="level2">
+<h2 class="anchored" data-anchor-id="random-models-was-silly-but-not-that-silly">Random models was silly… but not <em>that</em> silly</h2>
+<ul>
+<li>Turns out we could learn quite a bit with this method, and came up with a handful of decent models</li>
+<li>Q: How might we extend the method for a more systematic approach?</li>
+</ul>
+</section>
+<section id="systematic-search" class="level2">
+<h2 class="anchored" data-anchor-id="systematic-search">Systematic search</h2>
+<ul>
+<li>Maybe instead of searching randomly, we search <em>systematically</em> with a grid of slope-intercept combinations?
+<ul>
+<li>we’ll start with 250 models again</li>
+<li>we can control how fine the grid is if we want</li>
+<li>avoid clumping and sparsity of randomness</li>
+</ul></li>
+<li>so far the new grid suggests
+<ul>
+<li>b0 is maybe around 4</li>
+<li>b1 is maybe around 2</li>
+<li>Q: Is the model <span class="math inline">\(y = 4 + 2X\)</span> wrong? Is it useful?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create systematic grid; fit all models to the data</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand.grid</span>(<span class="at">b0 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">20</span>, <span class="at">length =</span> <span class="dv">25</span>), </span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">b1 =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="at">length =</span> <span class="dv">25</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dist =</span> purrr<span class="sc">::</span><span class="fu">map2_dbl</span>(b0, b1, sim1_dist))</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot models as points; color "best"</span></span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>grid <span class="sc">%&gt;%</span> </span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(b0, b1)) <span class="sc">+</span></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(grid, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> <span class="sc">-</span>dist)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span> </span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span> </span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> b0, <span class="at">slope =</span> b1, <span class="at">colour =</span> <span class="sc">-</span>dist), </span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> <span class="fu">filter</span>(grid, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="systematic-search-contd" class="level2">
+<h2 class="anchored" data-anchor-id="systematic-search-contd">Systematic search cont’d</h2>
+<ul>
+<li>let’s try a finer grid…</li>
+<li>best results so far
+<ul>
+<li>b0 between 0 and 7;</li>
+<li>b1 between 1.5 and 2.5</li>
+</ul></li>
+<li>Q: could we just continue this way?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create systematic grid; fit all models to the data</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand.grid</span>(<span class="at">b0 =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">7</span>, <span class="at">length =</span> <span class="dv">50</span>), </span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">b1 =</span> <span class="fu">seq</span>(<span class="fl">1.5</span>, <span class="fl">2.5</span>, <span class="at">length =</span> <span class="dv">50</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dist =</span> purrr<span class="sc">::</span><span class="fu">map2_dbl</span>(b0, b1, sim1_dist))</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co"># plot models as points; color "best"</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>grid <span class="sc">%&gt;%</span> </span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(b0, b1)) <span class="sc">+</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(grid, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>), <span class="at">size =</span> <span class="dv">4</span>, <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> <span class="sc">-</span>dist)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y)) <span class="sc">+</span> </span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span> </span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="fu">aes</span>(<span class="at">intercept =</span> b0, <span class="at">slope =</span> b1, <span class="at">colour =</span> <span class="sc">-</span>dist), </span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> <span class="fu">filter</span>(grid, <span class="fu">rank</span>(dist) <span class="sc">&lt;=</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-26-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="recap-of-our-grid-search" class="level2">
+<h2 class="anchored" data-anchor-id="recap-of-our-grid-search">Recap of our grid search…</h2>
+<ul>
+<li>We defined a distance metric (root-mean-square deviation) that we want to use to compare models
+<ul>
+<li>Smaller RMS deviation indicates the model is “close” to the data</li>
+<li>The “best” model is the one that minimizes our criterian (i.e.&nbsp;RMS deviation)</li>
+</ul></li>
+<li>Search process:
+<ol type="1">
+<li>decided on a model family (linear in this case)</li>
+<li>We started with a bunch of random lines, but then decided a systematic grid of combinations was a better idea</li>
+<li>We picked the 10 best models using our criterion</li>
+<li>We then searched again with a finer grid</li>
+<li>Repeat steps 4 &amp; 5 until satisfied</li>
+<li>Estimate model parameters</li>
+</ol></li>
+</ul>
+</section>
+<section id="optim-and-the-newton-raphson-alrogithm" class="level2">
+<h2 class="anchored" data-anchor-id="optim-and-the-newton-raphson-alrogithm"><code>optim()</code> and the Newton-Raphson alrogithm</h2>
+<ul>
+<li>The Newton-Raphson algorithm is a numerical optimization search
+<ol type="1">
+<li>pick a starting point for your parameter estimates</li>
+<li>look around for steepest slope (i.e.&nbsp;greatest improvement against our metric)</li>
+<li>ski down that slope a bit</li>
+<li>repeat</li>
+<li>you’re done when you can’t get any lower</li>
+</ol></li>
+<li>the <code>optim()</code> function does something conceptually similar for us
+<ul>
+<li>we provide starting point: <code>c(0, 0)</code></li>
+<li>we provide function to define distance between model and data: <code>measure_distance</code></li>
+<li>we provide data: <code>sim1</code></li>
+<li>R does the rest (note: our grid search wasn’t so bad!!)</li>
+</ul></li>
+<li>Q: how might this algorithm possibly result in a misleading conclusion?
+<ul>
+<li>This doesn’t usually happen, but you need to know it’s a risk</li>
+<li>Q: Ideas to protect against this risk?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>nrBest <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">fn =</span> measure_distance, <span class="at">data =</span> sim1)</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="co"># show parameter estimates</span></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>nrBest<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.222248 2.051204</code></pre>
+</div>
+</div>
+</section>
+<section id="lm-for-linear-models" class="level2">
+<h2 class="anchored" data-anchor-id="lm-for-linear-models"><code>lm()</code> for linear models</h2>
+<ul>
+<li>We had chosen “linear model” as our model family</li>
+<li>The <code>lm()</code> function in R is very efficient for the linear model family
+<ul>
+<li>family: <span class="math inline">\(y = b_0 + b_1 * x_1 + b_2 * x_2 + b_3 * x_3 + ...\)</span></li>
+<li>R syntax: <code>lm(Y ~ X1 + X2 + X3, data = DataSet)</code></li>
+<li><code>lm()</code> even fixes our problem with <code>optim()</code> to guarantee delivery of global minimum</li>
+</ul></li>
+<li>Q: thoughts about our three approaches?
+<ul>
+<li>random/grid search</li>
+<li>Newton-Raphson with <code>optim()</code></li>
+<li><code>lm()</code></li>
+<li>(having fun? take STAT 440!)</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>sim1_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> sim1)</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>sim1_lm<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)           x 
+   4.220822    2.051533 </code></pre>
+</div>
+</div>
+</section>
+<section id="quantifying-uncertainty-of-our-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="quantifying-uncertainty-of-our-estimates">Quantifying uncertainty of our estimates</h2>
+<ul>
+<li>We now have point estimates, but that does little for us unless we understand the <strong>uncertainty</strong> of those estimates (e.g.&nbsp;standard error)
+<ul>
+<li><code>lm()</code> has this functionality built in for us</li>
+<li><code>confint()</code> is also very useful for interval estimates</li>
+<li>Q: how could we achieve something similar using <code>optim()</code>?</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># confidence intervals</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(<span class="fu">lm</span>(y <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> sim1))  <span class="co"># what does this do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               2.5 %   97.5 %
+(Intercept) 13.12483 17.88368</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(sim1_lm, <span class="at">level =</span> <span class="fl">0.95</span>)   <span class="co"># what does this do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               2.5 %   97.5 %
+(Intercept) 2.441112 6.000532
+x           1.764707 2.338359</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># model summary table</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(sim1_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   4.2208     0.8688   4.858 4.09e-05 ***
+x             2.0515     0.1400  14.651 1.17e-14 ***
+
+Residual standard error: 2.203 on 28 degrees of freedom
+Multiple R-squared:  0.8846,    Adjusted R-squared:  0.8805 
+F-statistic: 214.7 on 1 and 28 DF,  p-value: 1.173e-14</code></pre>
+</div>
+</div>
+</section>
+<section id="quantifying-uncertainty-of-our-estimates-1" class="level2">
+<h2 class="anchored" data-anchor-id="quantifying-uncertainty-of-our-estimates-1">Quantifying uncertainty of our estimates</h2>
+<ul>
+<li>Multiple approaches…</li>
+<li>bootstrapping
+<ul>
+<li>sample with replacement from our data</li>
+<li>compute the estimates for each bootstrap sample</li>
+<li>calculate standard deviation of our bootstrap estimates to approximate the standard error</li>
+</ul></li>
+<li><code>lm()</code> takes advantage of some nice mathematical approximations
+<ul>
+<li>IF the data conform to the assumptions required for those mathematical approximations,
+<ul>
+<li><code>lm()</code> is convenient, accurate, and commonly used</li>
+<li>the bootstrap should deliver similar results, though</li>
+</ul></li>
+<li>IF the data do NOT conform to the assumptions,
+<ul>
+<li>you may need some more advanced skills to use <code>lm()</code> responsibly (take STAT 462)</li>
+<li>you should think about a different model family</li>
+<li>bootstrapping may or may not be useful depending on the issues at stake</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>nrBest <span class="ot">&lt;-</span> <span class="fu">optim</span>(<span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">fn =</span> measure_distance, <span class="at">data =</span> sim1)</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>nrBest<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.222248 2.051204</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># note the `$par` at end of `optim()`... try without to see why</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>BootstrapModels <span class="ot">&lt;-</span> </span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>  mosaic<span class="sc">::</span><span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">optim</span>(<span class="at">par =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">fn =</span> measure_distance, </span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">data =</span> <span class="fu">sample_n</span>(sim1, <span class="at">size =</span> <span class="fu">nrow</span>(sim1), <span class="at">replace =</span> <span class="cn">TRUE</span>))<span class="sc">$</span>par</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(BootstrapModels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        V1       V2
+1 3.875269 2.116182
+2 4.051802 2.119423
+3 3.214780 2.202456
+4 3.557224 2.124723
+5 2.902441 2.240019
+6 4.421693 1.936644</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># standard error </span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="sc">~</span> V1, <span class="at">data =</span> BootstrapModels) <span class="co"># intercept</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9337262</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(<span class="sc">~</span> V2, <span class="at">data =</span> BootstrapModels) <span class="co"># slope</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1452728</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% CI (percentile method)</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> V1, <span class="at">p =</span> <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">data =</span> BootstrapModels) <span class="co"># intercept</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    2.5%    97.5% 
+2.494480 6.068917 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qdata</span>(<span class="sc">~</span> V2, <span class="at">p =</span> <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>), <span class="at">data =</span> BootstrapModels) <span class="co"># slope</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    2.5%    97.5% 
+1.777344 2.346886 </code></pre>
+</div>
+</div>
+<section id="compare-lm-result-to-bootstrap" class="level4">
+<h4 class="anchored" data-anchor-id="compare-lm-result-to-bootstrap">Compare <code>lm()</code> result to Bootstrap</h4>
+<ul>
+<li>Note Standard Error estimates for each coefficient</li>
+<li>compare confidence interval estimates</li>
+<li>Q: what if we run the simulation again?</li>
+<li>Q: what if we run <strong>more</strong> bootstrap models?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># recall our `lm()` model for comparison</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(sim1_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   4.2208     0.8688   4.858 4.09e-05 ***
+x             2.0515     0.1400  14.651 1.17e-14 ***
+
+Residual standard error: 2.203 on 28 degrees of freedom
+Multiple R-squared:  0.8846,    Adjusted R-squared:  0.8805 
+F-statistic: 214.7 on 1 and 28 DF,  p-value: 1.173e-14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(sim1_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               2.5 %   97.5 %
+(Intercept) 2.441112 6.000532
+x           1.764707 2.338359</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise-mean-absolute-deviation" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-mean-absolute-deviation">Exercise: Mean Absolute Deviation</h2>
+<ul>
+<li>One weakness we are tolerating is a sensitivity to extreme observations</li>
+<li>Consider Mean Absolute Deviation vs.&nbsp;Root-Mean-Square Deviation
+<ul>
+<li>Q: Compare &amp; contrast the two approaches</li>
+<li>Q: How could you fit a model that minimizes the MAD metric?
+<ul>
+<li>use <code>sim1</code> data from <code>modelr</code> package?</li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- Day5 -->
+</section>
+<section id="evaluating-model-fit" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-model-fit">Evaluating model fit</h2>
+<ul>
+<li>Our model essentially partitions the information (i.e.&nbsp;variability) in the data into two parts
+<ol type="1">
+<li>structure that IS explained by the model (predictions)</li>
+<li>randomness that IS NOT explained by the model (residuals or “errors”)</li>
+</ol></li>
+<li>Note: The popular R-squared statistic is a simple description of this partition</li>
+</ul>
+</section>
+<section id="model-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="model-predictions">Model predictions</h2>
+<ul>
+<li>Regression could be described as “conditional expectation”</li>
+<li>Let’s consider sketching out our expectations, under various conditions…
+<ul>
+<li>We want to use our model to calculated the expected value of Y at a bunch of different values of X</li>
+<li>We need a sequence of X values for our investigation using <code>modelr::data_grid()</code></li>
+<li>We’ll then calculate the expected value of Y (i.e.&nbsp;prediction) at each one using <code>modelr::add_predictions()</code></li>
+</ul></li>
+</ul>
+<section id="initialize-the-grid" class="level4">
+<h4 class="anchored" data-anchor-id="initialize-the-grid">Initialize the grid</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>  sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_grid</span>(x)</span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a><span class="co"># just a bunch of evenly spaced hypothetical values for X...</span></span>
+<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(grid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+      x
+  &lt;int&gt;
+1     1
+2     2
+3     3
+4     4
+5     5
+6     6</code></pre>
+</div>
+</div>
+</section>
+<section id="add-some-predictions-using-our-existing-model-sim1_lm" class="level4">
+<h4 class="anchored" data-anchor-id="add-some-predictions-using-our-existing-model-sim1_lm">Add some predictions using our existing model (<code>sim1_lm</code>)</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>  grid <span class="sc">%&gt;%</span></span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(sim1_lm)</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a><span class="co"># predictions accompanying each hypothetical X value in our grid</span></span>
+<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(grid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+      x  pred
+  &lt;int&gt; &lt;dbl&gt;
+1     1  6.27
+2     2  8.32
+3     3 10.4 
+4     4 12.4 
+5     5 14.5 
+6     6 16.5 </code></pre>
+</div>
+</div>
+</section>
+<section id="plot-it" class="level4">
+<h4 class="anchored" data-anchor-id="plot-it">Plot it!</h4>
+<ul>
+<li>Admittedly, this isn’t the most direct way to add a regression line to a plot (e.g., <code>geom_abline()</code>)</li>
+<li><strong>The benefit</strong>: this simple approach extends to just about <strong>ANY</strong> model in R (even complex models)</li>
+<li>Your primary limitation now is visualization skills (NOT model complexity)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># just the data</span></span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sim1, <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add the grid of predictions to the data</span></span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sim1, <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb97-4"><a href="#cb97-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred), <span class="at">data =</span> grid, <span class="at">colour =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-34-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># since the model family is linear... </span></span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sim1, <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> pred), <span class="at">data =</span> grid, <span class="at">colour =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-34-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="residuals" class="level2">
+<h2 class="anchored" data-anchor-id="residuals">Residuals</h2>
+<ul>
+<li><strong>predictions</strong> illustrate the variability in the data <em>captured</em> by the model</li>
+<li><strong>residuals</strong> tell you what the model couldn’t capture/explain</li>
+</ul>
+<p><img src="absErrorsR4DS.png" class="img-fluid"></p>
+</section>
+<section id="residuals-1" class="level2">
+<h2 class="anchored" data-anchor-id="residuals-1">Residuals</h2>
+<ul>
+<li><strong>predictions</strong> illustrate the variability in the data <em>captured</em> by the model</li>
+<li><strong>residuals</strong> tell you what the model couldn’t capture/explain</li>
+<li>Q: what do we learn from this plot?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="ot">&lt;-</span> </span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>  sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(sim1_lm) <span class="sc">%&gt;%</span></span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_residuals</span>(sim1_lm)</span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb100-6"><a href="#cb100-6" aria-hidden="true" tabindex="-1"></a><span class="co"># we've just appended the model residuals to our data set</span></span>
+<span id="cb100-7"><a href="#cb100-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sim1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+      x     y  pred  resid
+  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+1     1  4.20  6.27 -2.07 
+2     1  7.51  6.27  1.24 
+3     1  2.13  6.27 -4.15 
+4     2  8.99  8.32  0.665
+5     2 10.2   8.32  1.92 
+6     2 11.3   8.32  2.97 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's look at the distribution of residuals</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(resid)) <span class="sc">+</span> </span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or commonly with a density plot</span></span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(resid)) <span class="sc">+</span> </span>
+<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-35-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="residuals-vs-x-our-predictor-variable" class="level4">
+<h4 class="anchored" data-anchor-id="residuals-vs-x-our-predictor-variable">Residuals vs X (our predictor variable)</h4>
+<ul>
+<li>Q: What do we learn here?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>sim1 <span class="sc">%&gt;%</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, resid)) <span class="sc">+</span> </span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<!-- Pick up from R4DS 23.4.1: Model Families  -->
+</section>
+</section>
+<section id="formula-syntax" class="level2">
+<h2 class="anchored" data-anchor-id="formula-syntax">Formula syntax</h2>
+<ul>
+<li>Models require that we use a formula syntax in R, for example <code>y ~ x1 + x2</code>
+<ul>
+<li>Note: <code>~ y</code> is sometimes shorthand for <code>y ~ 1</code> (e.g., <code>mosaic</code> package)</li>
+<li><code>y</code> is the outcome (response) variable of interest</li>
+<li><code>x1</code> and <code>x2</code> are <strong>explanatory</strong> variables… possibly continuous OR categorical</li>
+</ul></li>
+<li>Formula syntax is fairly self-evident when all variables are quantitative
+<ul>
+<li>pretty similar to HS algebra</li>
+<li><code>y ~ x</code> means <span class="math inline">\(y = a + b*x\)</span>… a line in two dimensions</li>
+<li><code>y ~ x1 + x2</code> means <span class="math inline">\(y = a + b*x_1 + c*x_2\)</span>… a line in three dimensions</li>
+<li><code>y ~ x + I(x^2)</code> means <span class="math inline">\(y = a + b*x + c*x^2\)</span>… a quadratic</li>
+</ul></li>
+<li>Things are less obvious when a <strong>categorical</strong> variable is involved
+<ul>
+<li><code>y ~ sex</code> where sex is either “male” or “female”…</li>
+<li><span class="math inline">\(y = a + b*(sex)\)</span> doesn’t make sense… sex isn’t a number that can be multiplied</li>
+<li>R converts <code>sex</code> to an <strong>indicator</strong> variable: <code>sexmale</code> (or <code>sexfemale</code>)</li>
+<li><code>sexmale</code> is 1 if <code>sex</code> is male, and 0 if <code>sex</code> is female</li>
+<li><code>y ~ sex</code> becomes <span class="math inline">\(y = a + b*sexmale\)</span> and we’re back in business</li>
+</ul></li>
+<li>Q: why doesn’t R create BOTH <code>sexmale</code> and <code>sexfemale</code>?</li>
+<li>Q: why are these all still called “linear” models?</li>
+</ul>
+</section>
+<section id="modeling-categorical-variables" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-categorical-variables">Modeling categorical variables</h2>
+<ul>
+<li>consider a new toy data set called <code>sim2</code>
+<ul>
+<li>inspect structure &amp; variables</li>
+<li>plot the data</li>
+<li>fit model with <code>lm()</code></li>
+<li>generate predictions</li>
+</ul></li>
+<li>Q: why are there 4 predictions, and not 40?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect data structures</span></span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sim2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [40 × 2] (S3: tbl_df/tbl/data.frame)
+ $ x: chr [1:40] "a" "a" "a" "a" ...
+ $ y: num [1:40] 1.94 1.18 1.24 2.62 1.11 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show scatter plot of categorical `x` variable</span></span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>sim2 <span class="sc">%&gt;%</span></span>
+<span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb107-4"><a href="#cb107-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(x, y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit a simple model and generate predictions again</span></span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> sim2)</span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb108-5"><a href="#cb108-5" aria-hidden="true" tabindex="-1"></a>  sim2 <span class="sc">%&gt;%</span> </span>
+<span id="cb108-6"><a href="#cb108-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_grid</span>(x) <span class="sc">%&gt;%</span> </span>
+<span id="cb108-7"><a href="#cb108-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod2)</span>
+<span id="cb108-8"><a href="#cb108-8" aria-hidden="true" tabindex="-1"></a>grid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 2
+  x      pred
+  &lt;chr&gt; &lt;dbl&gt;
+1 a      1.15
+2 b      8.12
+3 c      6.13
+4 d      1.91</code></pre>
+</div>
+</div>
+</section>
+<section id="modeling-categorical-variables-1" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-categorical-variables-1">Modeling categorical variables</h2>
+<ul>
+<li>Q: Why does a model with categorical <code>x</code> will just predict the mean value for each category?</li>
+<li>Q: What is our distance criterion for fitting the “best” model?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a>sim2 <span class="sc">%&gt;%</span></span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> grid, <span class="fu">aes</span>(<span class="at">y =</span> pred), <span class="at">colour =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="modeling-with-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-with-interactions">Modeling with interactions</h2>
+<ul>
+<li>sometimes we need to combine information about a quantitative &amp; a categorical variable in the same model</li>
+<li>Interpretation: we can’t explain the impact of <strong>one</strong> variable (x1) without considering <strong>another</strong> variable (x2)</li>
+<li>toy example
+<ul>
+<li>data: <code>sim3</code></li>
+<li>note: I’m using slightly irregular syntax to clarify the point</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect data structures</span></span>
+<span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(sim3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [120 × 5] (S3: tbl_df/tbl/data.frame)
+ $ x1 : int [1:120] 1 1 1 1 1 1 1 1 1 1 ...
+ $ x2 : Factor w/ 4 levels "a","b","c","d": 1 1 1 2 2 2 3 3 3 4 ...
+ $ rep: int [1:120] 1 2 3 1 2 3 1 2 3 1 ...
+ $ y  : Named num [1:120] -0.571 1.184 2.237 7.437 8.518 ...
+  ..- attr(*, "names")= chr [1:120] "a" "a" "a" "b" ...
+ $ sd : num [1:120] 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show scatter plot of categorical `x` variable</span></span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>sim3 <span class="sc">%&gt;%</span></span>
+<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y, <span class="at">color =</span> x2))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fit a simple model and generate predictions again</span></span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>mod3_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2, <span class="at">data =</span> sim3)</span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>mod3_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> x1<span class="sc">*</span>x2, <span class="at">data =</span> sim3)</span>
+<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="co"># generate model predictions</span></span>
+<span id="cb114-6"><a href="#cb114-6" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> </span>
+<span id="cb114-7"><a href="#cb114-7" aria-hidden="true" tabindex="-1"></a>  sim3 <span class="sc">%&gt;%</span> </span>
+<span id="cb114-8"><a href="#cb114-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_grid</span>(x1, x2) <span class="sc">%&gt;%</span> </span>
+<span id="cb114-9"><a href="#cb114-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod3_1, <span class="at">var =</span> <span class="st">"mod1"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb114-10"><a href="#cb114-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_predictions</span>(mod3_2, <span class="at">var =</span> <span class="st">"mod2"</span>)</span>
+<span id="cb114-11"><a href="#cb114-11" aria-hidden="true" tabindex="-1"></a>grid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 40 × 4
+      x1 x2     mod1  mod2
+   &lt;int&gt; &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1     1 a      1.67  1.21
+ 2     1 b      4.56  7.52
+ 3     1 c      6.48  5.71
+ 4     1 d      4.03  2.32
+ 5     2 a      1.48  1.12
+ 6     2 b      4.37  6.66
+ 7     2 c      6.28  5.68
+ 8     2 d      3.84  2.50
+ 9     3 a      1.28  1.02
+10     3 b      4.17  5.81
+# ℹ 30 more rows</code></pre>
+</div>
+</div>
+<section id="plot-the-interaction-model" class="level4">
+<h4 class="anchored" data-anchor-id="plot-the-interaction-model">Plot the interaction model</h4>
+<ul>
+<li>we should stack (i.e.&nbsp;gather) the predictions so we can make the model comparisons on the same plot</li>
+<li>Q: What’s happening here? recall…
+<ul>
+<li><code>mod3_1 &lt;- lm(y ~ x1 + x2, data = sim3)</code></li>
+<li><code>mod3_2 &lt;- lm(y ~ x1 + x2 + x1*x2, data = sim3)</code></li>
+<li>interpretation of <strong>interaction</strong></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>gridStack <span class="ot">&lt;-</span> </span>
+<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>  grid <span class="sc">%&gt;%</span></span>
+<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(<span class="at">key =</span> <span class="st">"model"</span>, <span class="at">value =</span> <span class="st">"pred"</span>, mod1, mod2)</span>
+<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="co"># model plot</span></span>
+<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>sim3 <span class="sc">%&gt;%</span></span>
+<span id="cb116-7"><a href="#cb116-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y, <span class="at">color =</span> x2)) <span class="sc">+</span> </span>
+<span id="cb116-8"><a href="#cb116-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb116-9"><a href="#cb116-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> gridStack, <span class="fu">aes</span>(<span class="at">y =</span> pred)) <span class="sc">+</span> </span>
+<span id="cb116-10"><a href="#cb116-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="co"># same model, but facets separate each model &amp; x2 combination</span></span>
+<span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>sim3 <span class="sc">%&gt;%</span></span>
+<span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y, <span class="at">color =</span> x2)) <span class="sc">+</span> </span>
+<span id="cb117-4"><a href="#cb117-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb117-5"><a href="#cb117-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> gridStack, <span class="fu">aes</span>(<span class="at">y =</span> pred)) <span class="sc">+</span> </span>
+<span id="cb117-6"><a href="#cb117-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(model <span class="sc">~</span> x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-40-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="write-down-each-model" class="level4">
+<h4 class="anchored" data-anchor-id="write-down-each-model">Write down each model</h4>
+<ul>
+<li>many people understand the interaction better by writing down the models</li>
+<li>here’s the model output so we can work them out</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = y ~ x1 + x2, data = sim3)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.4674 -0.8524 -0.0729  0.7886  4.3005 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  1.87167    0.38738   4.832 4.22e-06 ***
+x1          -0.19674    0.04871  -4.039 9.72e-05 ***
+x2b          2.88781    0.39571   7.298 4.07e-11 ***
+x2c          4.80574    0.39571  12.145  &lt; 2e-16 ***
+x2d          2.35959    0.39571   5.963 2.79e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.533 on 115 degrees of freedom
+Multiple R-squared:  0.5911,    Adjusted R-squared:  0.5768 
+F-statistic: 41.55 on 4 and 115 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod3_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = y ~ x1 + x2 + x1 * x2, data = sim3)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.87634 -0.67655  0.04837  0.69963  2.58607 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  1.30124    0.40400   3.221  0.00167 ** 
+x1          -0.09302    0.06511  -1.429  0.15587    
+x2b          7.06938    0.57134  12.373  &lt; 2e-16 ***
+x2c          4.43090    0.57134   7.755 4.41e-12 ***
+x2d          0.83455    0.57134   1.461  0.14690    
+x1:x2b      -0.76029    0.09208  -8.257 3.30e-13 ***
+x1:x2c       0.06815    0.09208   0.740  0.46076    
+x1:x2d       0.27728    0.09208   3.011  0.00322 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.024 on 112 degrees of freedom
+Multiple R-squared:  0.8221,    Adjusted R-squared:  0.811 
+F-statistic: 73.93 on 7 and 112 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<!-- Day6 -->
+</section>
+</section>
+<section id="plot-the-model-mosaicplotmodel" class="level2">
+<h2 class="anchored" data-anchor-id="plot-the-model-mosaicplotmodel">Plot the model (<code>mosaic::plotModel()</code>)</h2>
+<ul>
+<li>note: for simpler model forms, there are good functions to help (e.g., <code>mosaic</code> package)</li>
+<li>same models as before:
+<ul>
+<li><code>mod3_1 &lt;- lm(y ~ x1 + x2, data = sim3)</code></li>
+<li><code>mod3_2 &lt;- lm(y ~ x1 + x2 + x1*x2, data = sim3)</code></li>
+</ul></li>
+<li><code>mplot()</code> is a pretty handy function
+<ul>
+<li><strong>console</strong>: <code>mplot(sim1)</code> opens interactive graph-builder to get started with EDA</li>
+<li><strong>regression</strong>: <code>mplot(modelFit)</code> produces a few common residual plots
+<ul>
+<li>choose a single plot with <code>mplot(modelFit, which = 1)</code></li>
+<li>four-pack of common plots with <code>mplot(modelFit)</code></li>
+<li>other options available</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reproduce our model plots</span></span>
+<span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotModel</span>(mod3_1)  <span class="co"># no interaction (parallel lines)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotModel</span>(mod3_2)  <span class="co"># interaction    (non-parallel...slope can vary by group)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-42-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="co"># residuals vs fitted values</span></span>
+<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mplot</span>(mod3_1, <span class="at">which =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-42-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mplot</span>(mod3_2, <span class="at">which =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-42-4.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what's this?</span></span>
+<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mplot</span>(mod3_2, <span class="at">which =</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-42-5.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="interactions-continuouscontinuous" class="level2">
+<h2 class="anchored" data-anchor-id="interactions-continuouscontinuous">Interactions (continuous:continuous)</h2>
+<ul>
+<li>Recall: Continuous:Categorical interaction allows different slope &amp; intercept depending on the value of categorical variable</li>
+<li>Similarly: Continuous:Continuous interaction allows different slope &amp; intercept depending on the value of the other continuous variable.
+<ul>
+<li>Think of a twisted piece of graph paper… every combination of X1:X2 is still linear, but the slopes and intercepts vary</li>
+<li>Sometimes plotted as 3D wire diagrams (like the graph paper idea)</li>
+<li>Often plotted as 2D heat map or contour plot</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="interaction.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image credit: https://blogs.uoregon.edu/rclub/2016/10/05/looking-at-interactions-of-continuous-variables/</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="oridinary-least-squares-ols-regression-summary" class="level2">
+<h2 class="anchored" data-anchor-id="oridinary-least-squares-ols-regression-summary">Oridinary Least Squares (OLS) Regression Summary</h2>
+<ul>
+<li>Linear relationships are very convenient for interpret and understand</li>
+<li>Multiple regression is a great tool for attacking lots of interesting questions</li>
+<li>The assumptions are pretty straight-forward (L-I-N-E)
+<ul>
+<li><strong>L</strong>inear relationship between the mean response (Y) and each explanatory variable (X)</li>
+<li>observations are <strong>I</strong>ndependent</li>
+<li>responses are <strong>N</strong>ormally distributed at each level of X</li>
+<li>variance of the response is <strong>E</strong>qual for all levels of X</li>
+</ul></li>
+</ul>
+<p><img src="OLS-model.png" class="img-fluid"></p>
+</section>
+<section id="ols-regression-fail" class="level2">
+<h2 class="anchored" data-anchor-id="ols-regression-fail">OLS Regression Fail</h2>
+<p><strong>Problem: lots of interesting questions can’t be answered by data that satisfy those conditions.</strong></p>
+<p>Consider a couple of examples:</p>
+<ul>
+<li><strong>Grades &amp; Studying</strong></li>
+<li>Is the time spent studying predictive of success on an exam? The time spent studying for an exam (in hours) and result (pass/fail) are recorded for randomly selected students.</li>
+</ul>
+<blockquote class="blockquote">
+<ul>
+<li>since the objective is ultimately to associate the probability of success, <span class="math inline">\(p\)</span>, with the covariates, one might be tempted to try a linear model for the average binary response, <span class="math inline">\(p\)</span>: <span class="math inline">\(p_{i} = \beta_{0} + \beta_{1}x_{i}\)</span></li>
+<li>Q: What’s the <strong>OLS violation</strong>?</li>
+<li>e.g., the response variable is binary, which violates the OLS assumption of a normally distributed response at each level of X</li>
+<li>Result: <span class="math inline">\(p_{i} = \beta_{0} + \beta_{1}x_{i}\)</span> doesn’t work well for bernoulli/binomial response</li>
+<li><img src="binomial-model.png" title="fig:" class="img-fluid" alt="Binomial Regression"></li>
+</ul>
+</blockquote>
+</section>
+<section id="ols-regression-fail-1" class="level2">
+<h2 class="anchored" data-anchor-id="ols-regression-fail-1">OLS Regression Fail</h2>
+<p><strong>Problem: lots of interesting questions can’t be answered by data that satisfy those conditions.</strong></p>
+<p>Consider a couple of examples:</p>
+<ul>
+<li><strong>ER Visits &amp; Pollution</strong>:</li>
+<li>Is the number of asthma-related visits to a hospital Emergency Room associated with the air quality index for the day? The total number of ER patients (count) and the air quality index (continuous measurement)</li>
+</ul>
+<blockquote class="blockquote">
+<ul>
+<li>one might be tempted to try and model <span class="math inline">\(\lambda_{i}\)</span> as a linear function of the explanatory variable: <span class="math inline">\(\lambda_{i} = \beta_{0} + \beta_{1}x_{i}\)</span></li>
+<li>Q: What’s the <strong>OLS violation</strong>?</li>
+<li>e.g., the response variable is Poisson so we expect that mean = variance = <span class="math inline">\(\lambda\)</span>, which violates the OLS assumption of equal variance for all levels of X</li>
+<li>Result: <span class="math inline">\(\lambda_{i} = \beta_{0} + \beta_{1}x_{i}\)</span> doesn’t work well for Poisson response</li>
+<li><img src="poisson-model.png" title="fig:" class="img-fluid" alt="Poisson Regression"></li>
+</ul>
+</blockquote>
+</section>
+<section id="ols-regression-fail-2" class="level2">
+<h2 class="anchored" data-anchor-id="ols-regression-fail-2">OLS Regression Fail</h2>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 36%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Researchers</th>
+<th style="text-align: left;">Interests</th>
+<th style="text-align: left;">Variable Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ecologists:</td>
+<td style="text-align: left;">Number of Species</td>
+<td style="text-align: left;">Poisson</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Criminologists:</td>
+<td style="text-align: left;">Arrest Count</td>
+<td style="text-align: left;">Poisson</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cancer specialist:</td>
+<td style="text-align: left;">Number of cases</td>
+<td style="text-align: left;">Poisson</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Political Scientists:</td>
+<td style="text-align: left;">Who’s a democrate?</td>
+<td style="text-align: left;">Bernoulli or Binomial</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pre-med Student:</td>
+<td style="text-align: left;">Who gets into med school?</td>
+<td style="text-align: left;">Bernoulli or Binomial</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sociologist:</td>
+<td style="text-align: left;">Who’s got a tattoo?</td>
+<td style="text-align: left;">Bernoulli or Binomial</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="generalized-linear-models-glms" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-linear-models-glms">Generalized Linear Models (GLMs)</h2>
+<section id="one-parameter-exponential-family" class="level3">
+<h3 class="anchored" data-anchor-id="one-parameter-exponential-family">One-parameter exponential family</h3>
+<ul>
+<li><p>In the early 1970s Nelder &amp; Wedderburn identified a broader class of models that generalizes the multiple linear regression approach under certain conditions:</p>
+<ol type="1">
+<li>The probability formula (pdf or pmf) can be written as follows:</li>
+</ol>
+<p>[f(y; )=exp^{(a(y)b() + c() + d(y))}]</p>
+<ol start="2" type="1">
+<li>the set of possible values (i.e.&nbsp;the support) does not depend upon a parameter</li>
+</ol></li>
+<li><p>If so, it is said to have <strong>one-parameter exponential family form</strong>…</p></li>
+</ul>
+<p><br></p>
+</section>
+<section id="heres-the-cool-part" class="level3">
+<h3 class="anchored" data-anchor-id="heres-the-cool-part">…Here’s the cool part</h3>
+<blockquote class="blockquote">
+<ul>
+<li><span class="math inline">\(\mu = -\frac{c'(\theta)}{b'(\theta)}\)</span></li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li><span class="math inline">\(\sigma^2 = \frac{b''(\theta)c'(\theta) - c''(\theta)b'(\theta)}{[b'(\theta)]^3}\)</span></li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>(drum roll…)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li><span class="math inline">\(b(\theta) = \beta_0 + \beta_1X + ...\)</span> is a <strong>linear</strong> model!</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li><span class="math inline">\(b(\theta)\)</span> is called the <strong>canonical link</strong> function, meaning it’s often a good choice to model as a <strong>linear</strong> function of the explanatory variables (but other link functions exist and might be preferred under special circumstances).</li>
+</ul>
+</blockquote>
+</section>
+</section>
+<section id="glm-gut-check-poisson" class="level2">
+<h2 class="anchored" data-anchor-id="glm-gut-check-poisson">GLM gut-check (Poisson)</h2>
+<section id="goal" class="level3">
+<h3 class="anchored" data-anchor-id="goal">Goal:</h3>
+<p>[f(y; )=exp^{(a(y)b() + c() + d(y))}]</p>
+<p><strong>What if our response variable is…</strong></p>
+</section>
+<section id="poisson" class="level3">
+<h3 class="anchored" data-anchor-id="poisson">Poisson?</h3>
+<ul>
+<li>support: since possible values for any Poisson random variable range from <span class="math inline">\(0\)</span> to <span class="math inline">\(\infty\)</span>, the support doesn’t depend on <span class="math inline">\(\lambda\)</span></li>
+<li><span class="math inline">\(P(Y=y) = \frac{e^{-\lambda}\lambda^y}{y!}\)</span></li>
+<li>since <span class="math inline">\(\lambda^y = e^{ylog(\lambda)}\)</span></li>
+<li><span class="math inline">\(P(Y=y) = e^{-\lambda}e^{ylog(\lambda)}e^{-log(y!)}\)</span></li>
+<li><span class="math inline">\(P(Y=y) = e^{ylog(\lambda) - \lambda - log(y!)}\)</span></li>
+<li>then, <span class="math inline">\(b(\theta) = log(\lambda)\)</span></li>
+</ul>
+</section>
+</section>
+<section id="glm-gut-check-binomial" class="level2">
+<h2 class="anchored" data-anchor-id="glm-gut-check-binomial">GLM gut-check (Binomial)</h2>
+<section id="goal-1" class="level3">
+<h3 class="anchored" data-anchor-id="goal-1">Goal:</h3>
+<p>[f(y; )=exp^{(a(y)b() + c() + d(y))}]</p>
+<p><strong>What if our response variable is…</strong></p>
+</section>
+<section id="binomial" class="level3">
+<h3 class="anchored" data-anchor-id="binomial">Binomial?</h3>
+<ul>
+<li>support: for any value of <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &lt; p &lt; 1\)</span>, all integer values from 0 to <span class="math inline">\(n\)</span> are possible so the support doesn’t depend on <span class="math inline">\(p\)</span>.</li>
+<li><span class="math inline">\(P(Y=y) = {n\choose{y}}p^y(1-p)^{n-y}\)</span></li>
+<li><span class="math inline">\(P(Y=y) = e^{ylog(p) + (n-y)log(1-p) + log{n\choose{y}}}\)</span></li>
+<li><span class="math inline">\(P(Y=y) = e^{ylog(\frac{p}{1-p}) + nlog(1-p) + log{n\choose{y}}}\)</span></li>
+<li>then, <span class="math inline">\(b(\theta) = log(\frac{p}{1-p})\)</span></li>
+<li>this is called a <strong>logit</strong> function, and it is interpreted as the log of the odds of “success” where the observed outcome is deemed either “success” or “failure”</li>
+</ul>
+</section>
+</section>
+<section id="glm-gut-check-normal" class="level2">
+<h2 class="anchored" data-anchor-id="glm-gut-check-normal">GLM gut-check (Normal)</h2>
+<section id="goal-2" class="level3">
+<h3 class="anchored" data-anchor-id="goal-2">Goal:</h3>
+<p>[f(y; )=exp^{(a(y)b() + c() + d(y))}]</p>
+<p><strong>What if our response variable is…</strong></p>
+</section>
+<section id="normal" class="level3">
+<h3 class="anchored" data-anchor-id="normal">…Normal?</h3>
+<ul>
+<li><span class="math inline">\(f(y) = \frac{1}{\sigma\sqrt(2\pi)}e^{-\frac{(y - \mu)^2}{2\sigma^2}}\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<ul>
+<li><span class="math inline">\(f(y) = e^{-log(\sigma)-log(2\pi)/2}e^{-\frac{(y - \mu)^2}{2\sigma^2}}\)</span></li>
+<li>not looking good for our hero, but don’t panic… what if we assume <span class="math inline">\(\sigma\)</span> is known (i.e.&nbsp;constant)?</li>
+<li><span class="math inline">\(f(y) \propto e^{-(-2y\mu + \mu^2 + y^2)}\)</span></li>
+<li>then, <span class="math inline">\(b(\theta) = \mu\)</span></li>
+<li>so, <span class="math inline">\(\mu_{Y|X} = \beta_{0} + \beta_{1}X\)</span></li>
+<li>and, of course, possible values for any Normal random variable range from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, so the support looks good!</li>
+<li>Does this square with what you already know about multiple regression with a Normal response?</li>
+</ul>
+</blockquote>
+</section>
+</section>
+<section id="whos-in-the-family" class="level2">
+<h2 class="anchored" data-anchor-id="whos-in-the-family">Who’s in the family?</h2>
+<p>Here are some other distributions that can be written in one-parameter exponential family form:</p>
+<ul>
+<li>Bernoulli</li>
+<li>Binomial</li>
+<li>Poisson</li>
+<li>Normal</li>
+<li>Exponential</li>
+<li>Gamma</li>
+<li>Geometric</li>
+<li>Negative Binomial</li>
+<li>and some others that aren’t as common</li>
+</ul>
+</section>
+<section id="poisson-regression" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-regression">Poisson Regression</h2>
+<ul>
+<li>One-page summary of BYSH Chapter 4</li>
+<li>Poisson Regression Assumptions (L-M=V-I? …not as catchy):
+<ul>
+<li><strong>Linearity</strong>: the log of the mean rate <span class="math inline">\(log(\lambda_{i})\)</span> must be a linear function of x</li>
+<li><strong>Mean = Variance</strong> by definition because it’s Poisson</li>
+<li><strong>Independence</strong></li>
+</ul></li>
+<li>If the response throws you a curveball like overdispersion or too many zeroes there are sensible adjustments available
+<ul>
+<li>Accounting for overdispersion (BYSH, p.&nbsp;80)</li>
+<li>Zero-inflated Poisson (ZIP) model (BYSH, p.&nbsp;84)</li>
+</ul></li>
+<li>in R:
+<ul>
+<li><code>glm(Y ~ X, family = poisson)</code></li>
+<li>note: <strong>glm</strong> function and not the old <strong>lm</strong></li>
+</ul></li>
+<li>interpreting coefficient <span class="math inline">\(\beta_{1}\)</span>
+<ul>
+<li>since <span class="math inline">\(log(\lambda_{X}) = \beta_{0} + \beta_{1}X\)</span></li>
+<li>then, <span class="math inline">\(e^{\beta_{1}X} = \frac{\lambda_{X + 1}}{\lambda_{X}}\)</span> (this is called a “rate ratio” or sometimes “relative risk”)</li>
+<li>generically, the mean response changes by a factor of <span class="math inline">\(e^{\beta_{1}}\)</span> with each unit increase in X. For example, if <span class="math inline">\(e^{\beta_{1}} = 0.87\)</span> you describe it as a 13% decrease, and if <span class="math inline">\(e^{\beta_{1}} = 5.3\)</span> the mean response is 5.3 times (crudely, 530%) higher.</li>
+</ul></li>
+</ul>
+</section>
+<section id="logistic-regression" class="level2">
+<h2 class="anchored" data-anchor-id="logistic-regression">Logistic Regression</h2>
+<ul>
+<li>One-page summary of BYSH Chapter 6</li>
+<li>Binomial Regression Assumptions:
+<ul>
+<li>Binomial response is a sum of <span class="math inline">\(n\)</span> Bernoulli trials</li>
+<li>Trials are independent</li>
+<li><span class="math inline">\(n\)</span> is fixed (note: <span class="math inline">\(n = 1\)</span> is fine)</li>
+<li><span class="math inline">\(p\)</span> is the same for all trials</li>
+</ul></li>
+<li>Overdispersion adjustment (BYSH, p.&nbsp;114)</li>
+<li>in R:
+<ul>
+<li><code>glm(Y ~ X, family = binomial)</code></li>
+<li>note: <strong>glm</strong> function and not the old <strong>lm</strong></li>
+</ul></li>
+<li>interpreting coefficient <span class="math inline">\(\beta_{1}\)</span>
+<ul>
+<li>since <span class="math inline">\(log(\frac{p}{1-p}) = \beta_{0} + \beta_{1}X\)</span></li>
+<li>then, <span class="math inline">\(e^{\beta_{1}} = \frac{p_{1}/(1-p_{1})}{p_{0}/(1-p_{0})}\)</span> (this is an odds ratio)</li>
+<li>also, <span class="math inline">\(p = \frac{e^{\beta_{0}} + e^{\beta_{1}X}}{1 + e^{\beta_{0}} + e^{\beta_{1}X}}\)</span> (that’s the probability of “success” given X)</li>
+<li>generically, the odds of “success” change by a factor of <span class="math inline">\(e^{\beta_{1}}\)</span> with each unit increase in X. For example, if <span class="math inline">\(e^{\beta_{1}} = 0.10\)</span> the odds have decreased by 90%, and if <span class="math inline">\(e^{\beta_{1}} = 10.0\)</span> the odds of “success” are 10 times (crudely, 1000%) higher.</li>
+</ul></li>
+</ul>
+</section>
+<section id="one-last-time-back-to-chris" class="level2">
+<h2 class="anchored" data-anchor-id="one-last-time-back-to-chris">One last time… Back to Chris</h2>
+<p><img src="chris.png" class="img-fluid"></p>
+<ul>
+<li>What if we decide to approach the slight delay differently…</li>
+<li>Maybe what’s really important to Chris is whether or not the flight <em>departs</em> on time (within 10 minutes)
+<ul>
+<li>If the plane <em>leaves</em> on-time and then arrival is delayed by some problem at the destination, perhaps the client would be understanding.</li>
+<li>Response: <code>timelyDepart</code> coded {TRUE; FALSE} is <strong>binary</strong></li>
+<li>Explanatory Variables: <code>hour</code> of the day; <code>dow</code> day of the week</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(lubridate)</span>
+<span id="cb129-2"><a href="#cb129-2" aria-hidden="true" tabindex="-1"></a><span class="co"># some minor wrangling (what are we doing here?)</span></span>
+<span id="cb129-3"><a href="#cb129-3" aria-hidden="true" tabindex="-1"></a>OrdColleagueData <span class="ot">&lt;-</span> </span>
+<span id="cb129-4"><a href="#cb129-4" aria-hidden="true" tabindex="-1"></a>  OrdColleagueData <span class="sc">%&gt;%</span></span>
+<span id="cb129-5"><a href="#cb129-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">timelyDepart =</span> <span class="fu">if_else</span>(dep_delay <span class="sc">&lt;</span> <span class="dv">10</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>), </span>
+<span id="cb129-6"><a href="#cb129-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">date =</span> <span class="fu">ymd</span>(<span class="fu">paste0</span>(year, <span class="st">"-"</span>, month, <span class="st">"-"</span>, day)),</span>
+<span id="cb129-7"><a href="#cb129-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">dow =</span> <span class="fu">as.character</span>(<span class="fu">wday</span>(date, <span class="at">label =</span> <span class="cn">TRUE</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plot-the-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="plot-the-relationship">Plot the relationship</h2>
+<ul>
+<li>Let’s look at on-time departure status by hour of the day for our data</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a>OrdColleagueData <span class="sc">%&gt;%</span></span>
+<span id="cb130-2"><a href="#cb130-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(timelyDepart)) <span class="sc">%&gt;%</span></span>
+<span id="cb130-3"><a href="#cb130-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> hour, <span class="at">y =</span> <span class="fu">as.numeric</span>(timelyDepart))) <span class="sc">+</span> </span>
+<span id="cb130-4"><a href="#cb130-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.05</span>) <span class="sc">+</span> </span>
+<span id="cb130-5"><a href="#cb130-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>), <span class="at">se =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb130-6"><a href="#cb130-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"On-Time Departure Status"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Untitled_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="logistic-regression-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="logistic-regression-modeling">Logistic Regression Modeling</h2>
+<ul>
+<li>Again, we should write down the model to be sure we understand it…</li>
+<li>note about dispersion and “quasibinomial”</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>logitMod <span class="ot">&lt;-</span> <span class="fu">glm</span>(timelyDepart <span class="sc">~</span> hour <span class="sc">+</span> dow, <span class="at">family =</span> <span class="st">"binomial"</span>, </span>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">data =</span> OrdColleagueData)</span>
+<span id="cb132-3"><a href="#cb132-3" aria-hidden="true" tabindex="-1"></a><span class="fu">msummary</span>(logitMod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coefficients:
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)  2.75596    0.68938   3.998  6.4e-05 ***
+hour        -0.15303    0.03968  -3.857 0.000115 ***
+dowMon       0.65363    0.62029   1.054 0.291999    
+dowSat       2.37181    1.11623   2.125 0.033600 *  
+dowSun       0.61890    0.67101   0.922 0.356348    
+dowThu       0.16334    0.59281   0.276 0.782899    
+dowTue       0.61500    0.58134   1.058 0.290102    
+dowWed       1.16027    0.62223   1.865 0.062225 .  
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 229.20  on 221  degrees of freedom
+Residual deviance: 202.68  on 214  degrees of freedom
+  (8 observations deleted due to missingness)
+AIC: 218.68
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(logitMod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Waiting for profiling to be done...</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                  2.5 %      97.5 %
+(Intercept)  1.46812092  4.18823403
+hour        -0.23443271 -0.07802117
+dowMon      -0.55502510  1.90195495
+dowSat       0.52993681  5.35053411
+dowSun      -0.68138944  1.97628180
+dowThu      -1.00824240  1.33635109
+dowTue      -0.52908027  1.77133806
+dowWed      -0.04254077  2.42772057</code></pre>
+</div>
+</div>
+</section>
+<section id="other-model-families" class="level2">
+<h2 class="anchored" data-anchor-id="other-model-families">Other model families</h2>
+<ul>
+<li>Once you’ve mastered linear models, it’s easy to learn the mechanics of other model classes:
+<ul>
+<li><strong>Generalised linear models</strong> (GLM; <code>stats::glm()</code>): use a statistical idea called “likelihood” to accommodate either a continuous <strong>or non-continuous response variable</strong> (e.g.&nbsp;binary, binomial, or counts)</li>
+<li><strong>Generalised additive models</strong> (GAM; <code>mgcv::gam()</code>): extend GLM to incorporate arbitrary smooth functions</li>
+<li>Penalized linear models (e.g., Lasso; <code>glmnet::glmnet()</code>): add a penalty term to the distance metric in roder to reduce model complexity in an attempt to produce models that generalize better to new (out-of-sample) datasets from the same population</li>
+<li>Robust linear models (<code>MASS::rlm()</code>): tweak the distance metric to be less sensitive to outliers, at the cost of being not quite as efficient when there are no outliers.</li>
+<li>Trees (e.g.&nbsp;CART; <code>rpart::rpart()</code>): uses recursive partitioning to fit a piece-wise constant model, splitting the data into progressively smaller and smaller pieces.
+<ul>
+<li>Most effective when used in aggregate</li>
+<li>random forests (<code>randomForest::randomForest()</code>)</li>
+<li>gradient boosting machines (<code>xgboost::xgboost()</code>)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
